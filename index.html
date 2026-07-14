@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html>
+<html>
+<html lang="id">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="shortcut icon" href="https://fav.luvtoberi.com/fav/favmotif4d.webp">
+<title>FREEBET SALDO</title>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+min-height:100vh;
+color:white;
+
+background:
+radial-gradient(circle at top,
+#4d3a00 0%,
+#1a1a1a 25%,
+#0d0d0d 60%,
+#000000 100%);
+
+position:relative;
+
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+body::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+repeating-linear-gradient(
+45deg,
+rgba(255,215,0,.03) 0px,
+rgba(255,215,0,.03) 2px,
+transparent 2px,
+transparent 12px
+);
+pointer-events:none;
+}
+
+.container{
+width:100%;
+max-width:500px;
+margin:0 auto;
+padding:15px;
+text-align:center;
+}
+
+.title{
+font-size:60px;
+font-weight:900;
+text-transform:uppercase;
+
+background:linear-gradient(
+180deg,
+#fff6b0,
+#ffd700,
+#c99700
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 2px 0 #e6c200,
+0 4px 0 #b8860b,
+0 8px 12px rgba(0,0,0,.4);
+
+letter-spacing:3px;
+}.subtitle{
+margin-bottom:30px;
+font-size:18px;
+}
+
+.slot-machine{
+    width:320px;
+    margin:auto;
+    padding:25px;
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #121820 0%,
+            #0d1117 45%,
+            #05080c 100%
+        );
+
+    border:2px solid #33e6ff;
+
+    box-shadow:
+        0 0 8px rgba(0,220,255,.25),
+        0 0 18px rgba(0,170,220,.18),
+        inset 0 1px 0 rgba(255,255,255,.08),
+        inset 0 -2px 6px rgba(0,0,0,.45);
+
+    position:relative;
+}
+
+.slot-machine::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:28px;
+    padding:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dfffff,
+            #7efcff,
+            #22d9ff,
+            #0d9db8,
+            #0a6272
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+
+    pointer-events:none;
+}
+
+.reel{
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:clamp(24px,7vw,42px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-1px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #171717 0%,
+            #0f0f0f 45%,
+            #050505 100%
+        );
+
+    border-radius:15px;
+    border:2px solid #35eaff;
+
+    color:#dfffff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        inset 0 -2px 4px rgba(0,0,0,.6),
+        0 2px 8px rgba(0,220,255,.20);
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.15),
+        0 2px 2px rgba(0,90,110,.35);
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-align:center;
+    padding:0 12px;
+    box-sizing:border-box;
+
+    margin-bottom:20px;
+}
+.spin-btn{
+    display:inline-block;
+    min-width:120px;
+
+    padding:15px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #e8ffff 0%,
+            #8efcff 20%,
+            #2fe4ff 55%,
+            #00b8d9 100%
+        );
+
+    color:#04232c;
+    font-size:20px;
+    font-weight:900;
+
+    cursor:pointer;
+
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.65),
+        inset 0 -2px 4px rgba(0,90,110,.25),
+        0 8px 20px rgba(0,220,255,.25);
+
+    transition:all .3s ease;
+}
+
+.spin-btn:hover{
+
+    filter:brightness(1.08);
+
+    transform:
+        translateY(-2px)
+        scale(1.02);
+
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.8),
+        inset 0 -2px 4px rgba(0,90,110,.35),
+        0 12px 25px rgba(0,220,255,.35);
+}
+
+.spin-btn:active{
+
+    transform:translateY(1px);
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,.2),
+        0 4px 12px rgba(0,220,255,.2);
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(8px);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.popup-card{
+    width:90%;
+    max-width:420px;
+    padding:30px;
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1b1b1b 0%,
+            #111111 45%,
+            #070707 100%
+        );
+
+    border:3px solid #35eaff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        inset 0 -3px 6px rgba(0,0,0,.45),
+        0 0 10px rgba(0,220,255,.20),
+        0 10px 30px rgba(0,0,0,.45);
+}
+.win-title{
+    font-family:'Orbitron',sans-serif;
+    font-size:clamp(24px, 5vw, 32px);
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #dfffff,
+        #7feeff,
+        #18cbe6
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.win-amount{
+    margin:15px 0 20px;
+
+    font-family:'Orbitron',sans-serif;
+    font-size:30px;
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:.5px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #dfffff 20%,
+        #8efcff 55%,
+        #27dfff 80%,
+        #0ea5c6 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.claim-btn{
+    display:inline-block;
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    font-family:'Orbitron',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    border-radius:50px;
+    border:1px solid #38e8ff;
+
+    color:#06232c;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #dfffff 18%,
+        #8efcff 55%,
+        #27dfff 100%
+    );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.7),
+        inset 0 -2px 4px rgba(0,0,0,.08),
+        0 4px 12px rgba(0,0,0,.25);
+
+    transition:.25s ease;
+}
+
+.claim-btn:hover{
+    transform:translateY(-1px);
+    filter:brightness(1.05);
+}
+
+.claim-btn:active{
+    transform:translateY(1px);
+}
+.close-btn{
+    margin-top:15px;
+    padding:10px 25px;
+
+    border:1px solid #b3122d;
+    border-radius:25px;
+
+    background:linear-gradient(
+        180deg,
+        #ff5a6f 0%,
+        #d61f3b 35%,
+        #b3122d 70%,
+        #7d0b1e 100%
+    );
+
+    color:#ffffff;
+
+    font-family:'Orbitron',sans-serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.25),
+        inset 0 -2px 4px rgba(0,0,0,.25),
+        0 4px 12px rgba(125,11,30,.35);
+
+    transition:.25s ease;
+}
+
+.close-btn:hover{
+    transform:translateY(-1px);
+    filter:brightness(1.08);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35),
+        0 6px 15px rgba(125,11,30,.45);
+}
+
+.close-btn:active{
+    transform:translateY(1px);
+}
+.username-input{
+width:100%;
+max-width:320px;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+font-size:18px;
+text-align:center;
+margin-bottom:20px;
+}
+</style><head>
+<div class="container">
+
+<body class="worldcup-gold">
+
+<div class="gold-stars"></div>
+<div class="gold-shine"></div>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+html,
+body{
+margin:0;
+padding:0;
+width:100%;
+min-height:100vh;
+overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+background:#000;
+}
+
+/* =========================
+   WORLD CUP GOLD BACKGROUND
+========================= */
+.worldcup-gold{
+    position:relative;
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0,255,255,.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #103944 0%,
+            #0b1f27 25%,
+            #0a1015 60%,
+            #030303 100%
+        );
+}
+/* =========================
+   GOLD PARTICLES ULTRA LITE
+========================= */
+.gold-stars{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:1;
+opacity:.15;
+}
+
+.gold-stars:before{
+content:'';
+position:absolute;
+inset:0;
+
+background-image:
+radial-gradient(
+circle,
+#ffd700 1px,
+transparent 1.5px
+);
+
+background-size:120px 120px;
+
+animation:goldFloat 80s linear infinite;
+}
+
+@keyframes goldFloat{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-120px);
+}
+}
+
+/* =========================
+   GOLD SHINE
+========================= */
+.gold-shine{
+position:fixed;
+top:0;
+left:-30%;
+width:30%;
+height:100%;
+pointer-events:none;
+z-index:2;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,215,0,.03),
+transparent
+);
+
+animation:goldSweep 25s linear infinite;
+}
+
+@keyframes goldSweep{
+100%{
+left:130%;
+}
+}
+
+/* =========================
+   HEADER
+========================= */
+.world-cup-title{
+position:relative;
+z-index:10;
+text-align:center;
+padding:20px 15px;
+}
+
+/* =========================
+   BIG LOGO CLICKABLE
+========================= */
+.logo-link{
+display:block;
+text-decoration:none;
+}
+
+.wc-logo{
+    display:block;
+    margin:0 auto 20px;
+
+    width:420px;
+    max-width:92%;
+    height:auto;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 8px rgba(0,255,255,.75))
+        drop-shadow(0 0 18px rgba(0,220,255,.55))
+        drop-shadow(0 0 30px rgba(0,180,255,.35));
+
+    transition:.3s ease;
+    cursor:pointer;
+}
+
+/* Hover */
+.wc-logo:hover{
+    transform:scale(1.03);
+
+    filter:
+        drop-shadow(0 0 12px rgba(0,255,255,.95))
+        drop-shadow(0 0 24px rgba(0,220,255,.75))
+        drop-shadow(0 0 40px rgba(0,180,255,.55));
+}
+
+.wc-logo:hover{
+transform:scale(1.02);
+}
+
+.wc-logo:active{
+transform:scale(.98);
+}
+
+.wc-card{
+  background:
+  radial-gradient(circle at top,rgba(255,215,0,.08),transparent 45%),
+  linear-gradient(180deg,#08152e,#09111f);
+  border:2px solid #FFD700;
+  border-radius:18px;
+  padding:18px;
+  margin:15px 0;
+  color:#fff;
+  box-shadow:
+  0 0 12px rgba(255,215,0,.30),
+  0 0 25px rgba(255,215,0,.10);
+  }
+
+.wc-title{
+text-align:center;
+font-size:18px;
+font-weight:800;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.wc-match{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.wc-team{
+width:40%;
+text-align:center;
+font-weight:700;
+}
+
+.wc-team img{
+width:65px;
+}
+
+.wc-vs{
+width:20%;
+text-align:center;
+}
+
+.wc-vs span{
+display:block;
+font-size:30px;
+font-weight:900;
+color:#FFD700;
+}
+
+.wc-date{
+font-size:12px;
+color:#FFD700;
+}
+
+.wc-line{
+height:1px;
+margin:15px 0;
+background:linear-gradient(90deg,transparent,#FFD700,transparent);
+}
+
+.wc-pred{
+text-align:center;
+line-height:1.8;
+}
+
+.wc-pred b{
+color:#FFD700;
+}
+/* =========================
+   TITLE
+========================= */
+.world-cup-title h1{
+    margin:0;
+
+    font-family:'Orbitron',sans-serif;
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#ffffff;
+
+    -webkit-text-stroke:2px #0f5f99;
+
+    text-shadow:
+        /* Outline biru */
+        1px 0 #0f5f99,
+        -1px 0 #0f5f99,
+        0 1px #0f5f99,
+        0 -1px #0f5f99,
+
+        /* Outline aqua */
+        2px 0 #3fefff,
+        -2px 0 #3fefff,
+        0 2px #3fefff,
+        0 -2px #3fefff,
+
+        /* Outline orange */
+        3px 0 #ff7a00,
+        -3px 0 #ff7a00,
+        0 3px #ff7a00,
+        0 -3px #ff7a00,
+
+        /* Bayangan */
+        0 4px 8px rgba(0,0,0,.35);
+
+    transition:.3s;
+}
+
+.world-cup-title h1:hover{
+    transform:translateY(-1px);
+}
+
+.world-cup-title p{
+    margin-top:10px;
+
+    color:#7eeeff;
+
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.15),
+        0 2px 2px rgba(0,0,0,.35);
+}
+
+/* =========================
+   GOLD FRAME
+========================= */
+body::after{
+content:'';
+position:fixed;
+inset:8px;
+
+border:1px solid rgba(255,215,0,.15);
+border-radius:20px;
+
+pointer-events:none;
+z-index:999;
+
+box-shadow:
+0 0 8px rgba(255,215,0,.05);
+}
+
+/* =========================
+   PERFORMANCE BOOST
+========================= */
+.gold-stars,
+.gold-shine{
+transform:translate3d(0,0,0);
+will-change:transform;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+.wc-logo{
+width:340px;
+}
+
+.world-cup-title h1{
+font-size:28px;
+}
+
+.world-cup-title p{
+font-size:11px;
+letter-spacing:4px;
+}
+
+}
+.winner-box{
+    margin-top:20px;
+    padding:15px;
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818 0%,
+            #101010 55%,
+            #050505 100%
+        );
+
+    border:2px solid #32e8ff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        inset 0 -2px 6px rgba(0,0,0,.45),
+        0 4px 12px rgba(0,180,220,.18);
+}
+
+.winner-title{
+    text-align:center;
+    font-size:18px;
+    font-weight:900;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #dfffff 20%,
+        #8efcff 45%,
+        #35dfff 70%,
+        #0ea5c6 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.15),
+        0 2px 3px rgba(0,0,0,.35);
+
+    margin-bottom:12px;
+}
+
+.winner-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:8px 12px;
+    margin-bottom:8px;
+
+    border-radius:10px;
+
+    background:rgba(0,220,255,.06);
+    border:1px solid rgba(0,220,255,.18);
+
+    font-size:14px;
+    font-weight:700;
+    color:#eefcff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 2px 6px rgba(0,0,0,.20);
+}
+
+.winner-amount{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #dfffff 20%,
+        #8efcff 50%,
+        #2ed8ff 75%,
+        #009dc2 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    font-weight:900;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.15),
+        0 2px 2px rgba(0,0,0,.35);
+}
+</style>
+
+<!-- HEADER -->
+
+<div class="world-cup-title">
+
+<a href="https://motifmekar.com" target="_blank" class="logo-link">
+<img
+src="https://motifmekar.com/images/logoweb.png"
+class="wc-logo"
+alt="MOTIF4D">
+</a>
+
+<h1>SALDO FREEBET</h1>
+
+<p>MASUKKAN USERNAME ID KAMU DI KOTAK BAWAH INI.!!</p>
+
+</div>
+
+<!-- KONTEN WEBSITE -->
+
+<input
+type="text"
+id="username"
+placeholder="MASUKKAN USERNAME / ID"
+class="username-input">
+
+<br><br>
+<div class="slot-machine">
+
+<div class="reel" id="reel">
+- - - 
+</div>
+
+<button class="spin-btn" onclick="spinSlot()">
+ CLAIM
+</button>
+  <div class="winner-box">
+<div class="winner-title">
+LIST CLAIM FREEBET
+</div>
+<div id="winnerFeed"></div>
+
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+
+<div class="popup-card">
+
+<div class="win-title" id="winType">
+SALDO FREEBET
+</div>
+
+<div class="win-amount" id="popupAmount">
+Rp 0
+</div>
+
+<p id="popupUser"></p>
+
+<br>
+
+<a href="https://motifmekar.com"
+target="_blank"
+class="claim-btn">
+ CLAIM HADIAH
+</a>
+<br>
+
+<button class="close-btn" onclick="closePopup()">
+Tutup
+</button>
+
+</div>
+
+</div>
+<script>
+
+const winners = [
+
+["PAN***88","20.000"],
+["JOK***12","25.000"],
+["BOS***99","50.000"],
+["SUL***45","75.000"],
+["AND***77","100.000"],
+["VIP***11","20.000"],
+["MAX***66","25.000"],
+["PRO***09","50.000"],
+["WIN***88","75.000"],
+["TOP***21","100.000"],
+["LUC***55","20.000"],
+["DER***77","50.000"],
+["4DE***00","75.000"],
+["KIN***22","100.000"]
+["MIK***73","20.000"],
+["LEO***25","25.000"],
+["KEN***80","50.000"],
+["RIO***14","75.000"],
+["BAG***69","100.000"],
+["NIC***33","20.000"],
+["EKA***58","25.000"],
+["TOM***92","50.000"],
+["DAV***47","75.000"],
+["CHA***11","100.000"]
+];
+
+function renderWinners(){
+
+let html = "";
+
+const shuffled =
+[...winners].sort(()=>0.5-Math.random());
+
+const selected =
+shuffled.slice(0,5);
+
+selected.forEach(item=>{
+
+html += `
+<div class="winner-item">
+<span>${item[0]}</span>
+<span class="winner-amount">
+Rp ${item[1]}
+</span>
+</div>
+`;
+
+});
+
+document.getElementById("winnerFeed").innerHTML = html;
+
+}
+
+renderWinners();
+
+setInterval(renderWinners,5000);
+
+</script>
+<script>
+
+const hadiah = [
+  { nominal: 20000, label: "VOUCHER" },
+  { nominal: 25000, label: "VOUCHER" },
+  { nominal: 50000, label: "VOUCHER" },
+  { nominal: 75000, label: "VOUCHER" },
+  { nominal: 100000, label: "VOUCHER" }
+];
+
+let isSpinning=false;
+
+window.addEventListener("load",()=>{
+
+if(localStorage.getItem("voucher_claimed")){
+
+const btn=document.querySelector(".spin-btn");
+
+btn.innerHTML="SUDAH CLAIM";
+btn.disabled=true;
+btn.style.opacity=".5";
+btn.style.cursor="not-allowed";
+
+}
+
+});
+
+function spinSlot(){
+
+if(isSpinning) return;
+
+if(localStorage.getItem("voucher_claimed")){
+alert("❌ Voucher sudah pernah di-claim!");
+return;
+}
+
+const user=document.getElementById("username").value;
+
+if(user==""){
+alert("Masukkan Username terlebih dahulu!");
+return;
+}
+
+isSpinning=true;
+
+const reel=document.getElementById("reel");
+const btn=document.querySelector(".spin-btn");
+
+btn.innerHTML="MEMPROSES...";
+btn.disabled=true;
+
+let speed=50;
+let count=0;
+
+function rollingEffect(){
+
+const temp=
+hadiah[Math.floor(Math.random()*hadiah.length)];
+
+reel.innerHTML=
+"Rp "+temp.nominal.toLocaleString("id-ID");
+
+count++;
+
+if(count<45){
+
+if(count>25){
+speed+=12;
+}
+
+setTimeout(rollingEffect,speed);
+
+}else{
+
+const result=
+hadiah[Math.floor(Math.random()*hadiah.length)];
+
+reel.innerHTML=
+"Rp "+result.nominal.toLocaleString("id-ID");
+
+document.getElementById("winType").innerHTML=
+" FREEBET KAMU ";
+
+document.getElementById("popupAmount").innerHTML=
+"Rp "+result.nominal.toLocaleString("id-ID");
+
+document.getElementById("popupUser").innerHTML=
+"🎊 Selamat <b>"+user+
+"</b><br><br>SCREENSHOT VOUCHER INI DAN KIRIM KE ADMIN UNTUK CLAIM HADIAH.";
+
+document.getElementById("popup").style.display=
+"flex";
+
+localStorage.setItem("voucher_claimed","true");
+
+btn.innerHTML="SUDAH CLAIM";
+btn.disabled=true;
+btn.style.opacity=".5";
+btn.style.cursor="not-allowed";
+
+isSpinning=false;
+
+if(typeof confetti!=="undefined"){
+
+confetti({
+particleCount:400,
+spread:180,
+origin:{y:0.6}
+});
+
+setTimeout(()=>{
+confetti({
+particleCount:250,
+spread:120,
+origin:{x:0}
+});
+},300);
+
+setTimeout(()=>{
+confetti({
+particleCount:250,
+spread:120,
+origin:{x:1}
+});
+},300);
+
+}
+
+}
+
+}
+
+rollingEffect();
+
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+<script>
+function fitReelText(){
+    const reel = document.querySelector('.reel');
+
+    let size = 150; /* Perbesar dari 50 menjadi 70 */
+
+    reel.style.fontSize = size + 'px';
+
+    while(reel.scrollWidth > reel.clientWidth - 20 && size > 30){
+        size--;
+        reel.style.fontSize = size + 'px';
+    }
+}
+
+window.addEventListener('load', fitReelText);
+window.addEventListener('resize', fitReelText);
+</script>
+</body>
+</html>
