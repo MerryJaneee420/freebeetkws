@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <html lang="id">
@@ -424,428 +425,222 @@ margin-bottom:20px;
 <div class="gold-shine"></div>
 
 <style>
+<style>
 
 /* =========================
-   RESET
+   RED THEME OVERRIDE
 ========================= */
-html,
-body{
-margin:0;
-padding:0;
-width:100%;
-min-height:100vh;
-overflow-x:hidden;
-font-family:'Poppins',sans-serif;
-background:#000;
-}
 
-/* =========================
-   WORLD CUP GOLD BACKGROUND
-========================= */
 .worldcup-gold{
-    position:relative;
-    min-height:100vh;
-
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(0,255,255,.08),
-            transparent 35%
-        ),
-        linear-gradient(
-            180deg,
-            #103944 0%,
-            #0b1f27 25%,
-            #0a1015 60%,
-            #030303 100%
-        );
-}
-/* =========================
-   GOLD PARTICLES ULTRA LITE
-========================= */
-.gold-stars{
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:1;
-opacity:.15;
-}
-
-.gold-stars:before{
-content:'';
-position:absolute;
-inset:0;
-
-background-image:
+background:
 radial-gradient(
-circle,
-#ffd700 1px,
-transparent 1.5px
-);
-
-background-size:120px 120px;
-
-animation:goldFloat 80s linear infinite;
+circle at top,
+rgba(255,0,0,.18),
+transparent 35%
+),
+linear-gradient(
+180deg,
+#6b0000 0%,
+#3d0000 30%,
+#180000 70%,
+#000000 100%
+)!important;
 }
 
-@keyframes goldFloat{
-from{
-transform:translateY(0);
-}
-to{
-transform:translateY(-120px);
-}
+.wc-logo{
+filter:
+drop-shadow(0 0 10px rgba(255,0,0,.9))
+drop-shadow(0 0 25px rgba(255,50,50,.8))
+drop-shadow(0 0 45px rgba(255,0,0,.6))
+!important;
 }
 
-/* =========================
-   GOLD SHINE
-========================= */
-.gold-shine{
-position:fixed;
-top:0;
-left:-30%;
-width:30%;
-height:100%;
-pointer-events:none;
-z-index:2;
-
+.slot-machine{
 background:
 linear-gradient(
-90deg,
-transparent,
-rgba(255,215,0,.03),
-transparent
-);
+180deg,
+#250000 0%,
+#180000 50%,
+#090000 100%
+)!important;
 
-animation:goldSweep 25s linear infinite;
-}
-
-@keyframes goldSweep{
-100%{
-left:130%;
-}
-}
-
-/* =========================
-   HEADER
-========================= */
-.world-cup-title{
-position:relative;
-z-index:10;
-text-align:center;
-padding:20px 15px;
-}
-
-/* =========================
-   BIG LOGO CLICKABLE
-========================= */
-.logo-link{
-display:block;
-text-decoration:none;
-}
-
-.wc-logo{
-    display:block;
-    margin:0 auto 20px;
-
-    width:420px;
-    max-width:92%;
-    height:auto;
-
-    object-fit:contain;
-
-    filter:
-        drop-shadow(0 0 8px rgba(0,255,255,.75))
-        drop-shadow(0 0 18px rgba(0,220,255,.55))
-        drop-shadow(0 0 30px rgba(0,180,255,.35));
-
-    transition:.3s ease;
-    cursor:pointer;
-}
-
-/* Hover */
-.wc-logo:hover{
-    transform:scale(1.03);
-
-    filter:
-        drop-shadow(0 0 12px rgba(0,255,255,.95))
-        drop-shadow(0 0 24px rgba(0,220,255,.75))
-        drop-shadow(0 0 40px rgba(0,180,255,.55));
-}
-
-.wc-logo:hover{
-transform:scale(1.02);
-}
-
-.wc-logo:active{
-transform:scale(.98);
-}
-
-.wc-card{
-  background:
-  radial-gradient(circle at top,rgba(255,215,0,.08),transparent 45%),
-  linear-gradient(180deg,#08152e,#09111f);
-  border:2px solid #FFD700;
-  border-radius:18px;
-  padding:18px;
-  margin:15px 0;
-  color:#fff;
-  box-shadow:
-  0 0 12px rgba(255,215,0,.30),
-  0 0 25px rgba(255,215,0,.10);
-  }
-
-.wc-title{
-text-align:center;
-font-size:18px;
-font-weight:800;
-color:#FFD700;
-margin-bottom:15px;
-}
-
-.wc-match{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.wc-team{
-width:40%;
-text-align:center;
-font-weight:700;
-}
-
-.wc-team img{
-width:65px;
-}
-
-.wc-vs{
-width:20%;
-text-align:center;
-}
-
-.wc-vs span{
-display:block;
-font-size:30px;
-font-weight:900;
-color:#FFD700;
-}
-
-.wc-date{
-font-size:12px;
-color:#FFD700;
-}
-
-.wc-line{
-height:1px;
-margin:15px 0;
-background:linear-gradient(90deg,transparent,#FFD700,transparent);
-}
-
-.wc-pred{
-text-align:center;
-line-height:1.8;
-}
-
-.wc-pred b{
-color:#FFD700;
-}
-/* =========================
-   TITLE
-========================= */
-.world-cup-title h1{
-    margin:0;
-
-    font-family:'Orbitron',sans-serif;
-    font-size:42px;
-    font-weight:900;
-    letter-spacing:3px;
-    text-transform:uppercase;
-
-    color:#ffffff;
-
-    -webkit-text-stroke:2px #0f5f99;
-
-    text-shadow:
-        /* Outline biru */
-        1px 0 #0f5f99,
-        -1px 0 #0f5f99,
-        0 1px #0f5f99,
-        0 -1px #0f5f99,
-
-        /* Outline aqua */
-        2px 0 #3fefff,
-        -2px 0 #3fefff,
-        0 2px #3fefff,
-        0 -2px #3fefff,
-
-        /* Outline orange */
-        3px 0 #ff7a00,
-        -3px 0 #ff7a00,
-        0 3px #ff7a00,
-        0 -3px #ff7a00,
-
-        /* Bayangan */
-        0 4px 8px rgba(0,0,0,.35);
-
-    transition:.3s;
-}
-
-.world-cup-title h1:hover{
-    transform:translateY(-1px);
-}
-
-.world-cup-title p{
-    margin-top:10px;
-
-    color:#7eeeff;
-
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:6px;
-
-    text-transform:uppercase;
-
-    text-shadow:
-        0 1px 0 rgba(255,255,255,.15),
-        0 2px 2px rgba(0,0,0,.35);
-}
-
-/* =========================
-   GOLD FRAME
-========================= */
-body::after{
-content:'';
-position:fixed;
-inset:8px;
-
-border:1px solid rgba(255,215,0,.15);
-border-radius:20px;
-
-pointer-events:none;
-z-index:999;
+border:2px solid #ff3b3b!important;
 
 box-shadow:
-0 0 8px rgba(255,215,0,.05);
+0 0 10px rgba(255,0,0,.4),
+0 0 25px rgba(255,0,0,.25),
+inset 0 1px 0 rgba(255,255,255,.05)!important;
 }
 
-/* =========================
-   PERFORMANCE BOOST
-========================= */
-.gold-stars,
-.gold-shine{
-transform:translate3d(0,0,0);
-will-change:transform;
+.slot-machine::before{
+background:
+linear-gradient(
+135deg,
+#ffd6d6,
+#ff8a8a,
+#ff4444,
+#d90000,
+#7a0000
+)!important;
 }
 
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:768px){
+.reel{
+border:2px solid #ff4d4d!important;
 
-.wc-logo{
-width:340px;
+color:#ffffff!important;
+
+box-shadow:
+0 0 15px rgba(255,0,0,.35),
+inset 0 0 12px rgba(255,0,0,.25)!important;
+
+text-shadow:
+0 0 10px rgba(255,80,80,.8)!important;
 }
 
-.world-cup-title h1{
-font-size:28px;
+.spin-btn{
+background:
+linear-gradient(
+180deg,
+#ffb3b3 0%,
+#ff6666 25%,
+#ff2222 60%,
+#b00000 100%
+)!important;
+
+color:#fff!important;
+
+box-shadow:
+0 0 15px rgba(255,0,0,.5),
+0 0 30px rgba(255,0,0,.25)!important;
 }
 
-.world-cup-title p{
-font-size:11px;
-letter-spacing:4px;
+.spin-btn:hover{
+filter:brightness(1.1)!important;
 }
 
+.popup-card{
+background:
+linear-gradient(
+180deg,
+#240000 0%,
+#120000 55%,
+#050000 100%
+)!important;
+
+border:3px solid #ff3b3b!important;
+
+box-shadow:
+0 0 20px rgba(255,0,0,.45),
+0 0 40px rgba(255,0,0,.25)!important;
 }
+
+.win-title{
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#ffd4d4,
+#ff8888,
+#ff3333
+)!important;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.win-amount{
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#ffd0d0,
+#ff8888,
+#ff3333,
+#c40000
+)!important;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.claim-btn{
+background:
+linear-gradient(
+180deg,
+#ffb3b3,
+#ff6666,
+#ff2222,
+#b00000
+)!important;
+
+color:#fff!important;
+
+border:1px solid #ff5555!important;
+}
+
 .winner-box{
-    margin-top:20px;
-    padding:15px;
-    border-radius:15px;
+border:2px solid #ff3333!important;
 
-    background:
-        linear-gradient(
-            180deg,
-            #181818 0%,
-            #101010 55%,
-            #050505 100%
-        );
-
-    border:2px solid #32e8ff;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.08),
-        inset 0 -2px 6px rgba(0,0,0,.45),
-        0 4px 12px rgba(0,180,220,.18);
+box-shadow:
+0 0 15px rgba(255,0,0,.25)!important;
 }
 
 .winner-title{
-    text-align:center;
-    font-size:18px;
-    font-weight:900;
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#ffcccc,
+#ff6666,
+#ff2222
+)!important;
 
-    background:linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #dfffff 20%,
-        #8efcff 45%,
-        #35dfff 70%,
-        #0ea5c6 100%
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-
-    text-shadow:
-        0 1px 0 rgba(255,255,255,.15),
-        0 2px 3px rgba(0,0,0,.35);
-
-    margin-bottom:12px;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .winner-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+background:
+rgba(255,0,0,.08)!important;
 
-    padding:8px 12px;
-    margin-bottom:8px;
-
-    border-radius:10px;
-
-    background:rgba(0,220,255,.06);
-    border:1px solid rgba(0,220,255,.18);
-
-    font-size:14px;
-    font-weight:700;
-    color:#eefcff;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.05),
-        0 2px 6px rgba(0,0,0,.20);
+border:1px solid rgba(255,0,0,.25)!important;
 }
 
 .winner-amount{
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#ffcccc,
+#ff7777,
+#ff2222
+)!important;
 
-    background:linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #dfffff 20%,
-        #8efcff 50%,
-        #2ed8ff 75%,
-        #009dc2 100%
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-
-    font-weight:900;
-
-    text-shadow:
-        0 1px 0 rgba(255,255,255,.15),
-        0 2px 2px rgba(0,0,0,.35);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
+
+.world-cup-title h1{
+-webkit-text-stroke:2px #a00000!important;
+
+text-shadow:
+0 0 8px rgba(255,0,0,.7),
+0 0 18px rgba(255,0,0,.5),
+0 0 30px rgba(255,0,0,.3)!important;
+}
+
+.world-cup-title p{
+color:#ffb3b3!important;
+}
+
+.username-input{
+border:2px solid #ff3333!important;
+
+box-shadow:
+0 0 12px rgba(255,0,0,.25)!important;
+}
+
+</style>
 </style>
 
 <!-- HEADER -->
@@ -854,7 +649,7 @@ letter-spacing:4px;
 
 <a href="https://motifmekar.com" target="_blank" class="logo-link">
 <img
-src="https://motifmekar.com/images/logoweb.png"
+src="http://inikawasan.mom/images/logoweb.png"
 class="wc-logo"
 alt="MOTIF4D">
 </a>
