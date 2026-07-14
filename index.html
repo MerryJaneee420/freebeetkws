@@ -600,21 +600,31 @@ linear-gradient(
 }
 
 .winner-item{
-background:
-rgba(255,0,0,.08)!important;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-border:1px solid rgba(255,0,0,.25)!important;
+    background:transparent !important;
+    border-bottom:1px solid rgba(255,0,0,.4);
+
+    padding:4px 8px;
+}
+
+.winner-item span{
+    background:none !important;
+    color:#ffffff !important;
+
+    -webkit-text-fill-color:#ffffff !important;
 }
 
 .winner-amount{
-background:
-linear-gradient(
-180deg,
-#ffffff,
-#ffcccc,
-#ff7777,
-#ff2222
-)!important;
+    background:none !important;
+    color:#ffffff !important;
+
+    -webkit-text-fill-color:#ffffff !important;
+
+    font-weight:bold;
+}
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
